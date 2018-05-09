@@ -31,13 +31,7 @@ class BackController extends Controller
             $message->to('foo@example.com');
         });
 */
-        $data = array('mess' => 'test', 'email' => 'test',);
 
-        $sujet = 'sujet';
-
-        Mail::send('test', $data, function ($message) use ($sujet) {
-            $message->to('dylan.moretto06@gmail.com')->subject($sujet);
-        });
 
         return view ('back.index');
     }
