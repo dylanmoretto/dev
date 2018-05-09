@@ -11,6 +11,8 @@ use Illuminate\Http\Request;
 use App\Models\Family;
 use App\Models\Prestation;
 use Cart;
+use App\Http\Requests;
+use Mail;
 
 
 
@@ -21,8 +23,25 @@ class BackController extends Controller
 
     public function index ()
     {
+        /*$data = array();
+
+        Mail::send('test', $data, function ($message) {
+            $message->from('us@example.com', 'Laravel');
+
+            $message->to('foo@example.com');
+        });
+*/
+        $data = array('mess' => 'test', 'email' => 'test',);
+
+        $sujet = 'sujet';
+
+        Mail::send('test', $data, function ($message) use ($sujet) {
+            $message->to('dylan.moretto06@gmail.com')->subject($sujet);
+        });
+
         return view ('back.index');
     }
+
 
     public function newsletter ()
     {
