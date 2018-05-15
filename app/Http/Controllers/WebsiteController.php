@@ -16,7 +16,7 @@ use App\Models\Family;
 use App\Models\Prestation;
 use Illuminate\Http\Request;
 use App\Providers\NewsletterProvider;
-
+use App\Models\Newsletter;
 
 
 class WebsiteController extends Controller
@@ -70,5 +70,16 @@ class WebsiteController extends Controller
        return view ('website.block.adress', array(
            'result' => $return,
        ));
+    }
+
+
+    public function Unsubscribe ($token)
+    {
+        if ('1' == Newsletter::getByToken($token)){
+            Newsletter::UnsubscribeByToken($token);
+            return view ('mailing.unsubscribe');
+        } else {
+            return redirect()->route('index');
+        }
     }
 }

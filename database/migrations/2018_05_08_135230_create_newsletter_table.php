@@ -16,6 +16,10 @@ class CreateNewsletterTable extends Migration
         Schema::create('newsletter', function (Blueprint $table) {
             $table->increments('id');
             $table->char('mail', 100);
+            $table->char('token', 100);
+            $table->dateTime('created_at');
+            $table->dateTime('desactived_at');
+            $table->boolean('active');
         });
     }
 

@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+Use Mail;
 
 class MailServiceProvider extends ServiceProvider
 {
@@ -26,12 +27,12 @@ class MailServiceProvider extends ServiceProvider
         //
     }
 
-    public function sendmail($to, $sujet, $view, $data)
+    public static function sendmail($to, $sujet, $view, $data)
     {
         $data = array('mess' => 'test', 'email' => 'test',);
         $sujet = 'sujet';
 
-        Mail::send('test', $data, function ($message) use ($sujet) {
+        Mail::send($view, $data, function ($message) use ($sujet) {
             $message->to('dylan.moretto06@gmail.com')->subject($sujet);
         });
     }

@@ -27,7 +27,7 @@ Route::get('/who', 'WebsiteController@whoAre')->name('who');
 
 Route::post('/addmail', 'WebsiteController@addToNewsletter');
 
-
+Route::get('/unsubscribe/{id}', 'WebsiteController@Unsubscribe');
 
 /*
  * Route BACK
