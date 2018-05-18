@@ -6,8 +6,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="WowThemez">
+    <meta name="description" content="L'Atelier de Cassandra, salon de coiffure, toutes préstation, localisé sur la code d'azur dans le charment village de Biot">
+    <meta name="author" content="Dylan Moretto">
     <title>{{Config::get('constante.constante.title')}}</title>
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
 

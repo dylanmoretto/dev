@@ -14,21 +14,35 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Models\Family;
 use App\Models\Prestation;
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;
 use App\Providers\NewsletterProvider;
 use App\Models\Newsletter;
+use Request;
+use App\Providers\IpProvider;
+use App\Models\View;
+
+
+/*
+ * Avant chaque return on insert dans la DB view
+ *
+ *  View::saveView($page);
+ */
 
 
 class WebsiteController extends Controller
 {
     public function index()
     {
+        View::saveView("index");
+
         return view ('website/index');
     }
 
 
     public function contact()
     {
+        View::saveView("contact");
+
         return view ('website/contact');
     }
 
@@ -37,6 +51,7 @@ class WebsiteController extends Controller
     {
     	$family = Family::getAllFamily();
     	$presta = Prestation::getAllPrestation();
+        View::saveView("tarif");
 
         return view ('website/tarif', array (
         	'family' => $family,
@@ -50,7 +65,9 @@ class WebsiteController extends Controller
     	$name = $request->input('name');
     	$mail = $request->input('mail');
     	$object = $request->input('object');
-    	$text = $request->input('text');var_dump($text);die;
+    	$text = $request->input('text');
+
+        View::saveView("contact");
 
         return view ('website/contact', array(
         	'alert' => 'ok',
@@ -60,6 +77,8 @@ class WebsiteController extends Controller
 
     public function whoAre()
     {
+        View::saveView("who");
+
         return view ('website/who');
     }
 

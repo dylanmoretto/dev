@@ -148,6 +148,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+        Khill\Lavacharts\Laravel\LavachartsServiceProvider,
         
         /*
          * Package Service Providers...
@@ -212,7 +213,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
-
+        'Lava' => 'Khill\Lavacharts\Laravel\LavachartsFacade',
     ],
 
 ];

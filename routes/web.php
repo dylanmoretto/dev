@@ -36,6 +36,8 @@ Route::get('/unsubscribe/{id}', 'WebsiteController@Unsubscribe');
 Route::get('/back', 'BackController@index')->name('indexBack');
 Route::get('/back/newsletter', 'BackController@newsletter')->name('newsletter');
 
+Route::get('/back/stat', 'BackController@stat')->name('stat');
+
 
 
 /*

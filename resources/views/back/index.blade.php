@@ -171,8 +171,8 @@
                 <div class="stat-widget-one">
                     <div class="stat-icon dib"><i class="ti-user text-primary border-primary"></i></div>
                     <div class="stat-content dib">
-                        <div class="stat-text">Nombre de personne active</div>
-                        <div class="stat-digit">961</div>
+                        <div class="stat-text">Nombre de visites aujourd'hui</div>
+                        <div class="stat-digit">{{$nbViewToday}}</div>
                     </div>
                 </div>
             </div>
