@@ -7,6 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="L'Atelier de Cassandra, salon de coiffure, toutes préstation, localisé sur la code d'azur dans le charment village de Biot">
+    <META NAME="keywords" CONTENT="Atelier de Cassandra, Coiffure, Hairdresser, Barber, BarberShop, Couleur, Coupe, Brushing, Biot, Biot Vilage, Antibes, Cote d'azur, 06, extension, Permanente, Coupe de cheveux"> 
     <meta name="author" content="Dylan Moretto">
     <title>{{Config::get('constante.constante.title')}}</title>
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
@@ -25,52 +26,41 @@
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <body>
-<!--[if lt IE 8]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
 
 <div id='preloader' >
     <div class='loader' >
         <img src="img/loading.gif" width="80" alt="">
     </div>
-</div><!-- Preloader -->
+</div>
 
 <header id="header" class="header_section">
     <nav class="navbar">
         <div class="container">
             <div class="navbar-header">
-                <h2 clas ="nav-header">{{Config::get('constante.constante.title')}}</h2>
+                <h2 class ="nav-header"><a href ="{{route('index')}}">{{Config::get('constante.constante.title')}}</a></h2>
             </div>
             <div id="navbar" class="navbar-right">
                 <ul id="mainmenu" class="nav navbar-nav nav-menu">
                     <li class="active"><a href="{{route('index')}}">Acceuil <span class="sr-only">(current)</span></a>
                     </li>
                     <li> <a href="{{route('tarif')}}">Tarifs</a>
-                        <ul>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="about-2.html">About 02</a></li>
-                        </ul>
                     </li>
-                    <li> <a href="services.html">Boutique</a>
+                   <!-- <li> <a href="services.html">Boutique</a>
                         <ul>
                             <li><a href="services.html">Service</a></li>
                             <li><a href="services-2.html">Service 02</a></li>
                         </ul>
-                    </li>
-                    <li> <a href="appointment.html">Galerie</a>
-                        <ul>
-                            <li class="active"><a href="appointment.html">Appointment</a></li>
-                            <li><a href="appointment-2.html">Appointment 02</a></li>
-                        </ul>
+                    </li> -->
+                    <li> <a href="{{route('galerie')}}">Galerie</a>
                     </li>
                     <li> <a href="{{route('who')}}">Qui sommes nous ?</a>
                     </li>
                     <li><a href="{{route('contact')}}">Contact</a></li>
                 </ul>
-            </div><!--/.navbar-collapse -->
+            </div>
         </div>
-    </nav><!-- Navigation Bar -->
-</header> <!-- Header_Section -->
+    </nav>
+</header> 
 
 <div class="content">
   @yield('content')
@@ -125,7 +115,7 @@
         <div class="col-md-4 col-xs-6 xs-padding">
             <div class="footer_widget">
                 <h3>Horaires d'ouverture</h3>
-                <h4>Mercredi - Vendredi  9h-12h  13h-19h <br>Saturday - Sunday 4:30PM - 10:00PM <br>Monday - Friday 5:30PM - 11:00PM</h4>
+                <h4>Mardi - Vendredi  9h-19h <br>Samedi - 10h-19h</h4>
 
             </div>
         </div>
@@ -148,7 +138,7 @@
             </div>
         </div>
     </div>
-</section><!-- /.widget_section -->
+</section>
 
 <footer class="footer_section">
     <div class="container">
@@ -157,17 +147,14 @@
         </div>
         <div class="col-xs-6 xs-padding">
             <ul class="footer_social">
-                <li><a href="#">Orders</a></li>
-                <li><a href="#">Terms</a></li>
-                <li><a href="#">Report Problem</a></li>
+                <li><a href="#">Mentions légales</a></li>
             </ul>
         </div>
     </div>
-</footer><!-- /.footer_section -->
+</footer>
 
 <a data-scroll href="#header" id="scroll-to-top"><i class="arrow_up"></i></a>
 
-<!-- jQuery Lib -->
 <script src="{{asset('js/vendor/jquery-1.12.4.min.js')}}"></script>
 <script src="{{asset('js/vendor/bootstrap.min.js')}}"></script>
 <script src="{{asset('js/vendor/imagesloaded.pkgd.min.js')}}"></script>

@@ -101,4 +101,10 @@ class WebsiteController extends Controller
             return redirect()->route('index');
         }
     }
+
+
+    public function showGalery()
+    {
+        return view ('website/galerie');
+    }
 }

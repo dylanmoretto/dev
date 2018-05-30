@@ -29,6 +29,8 @@ Route::post('/addmail', 'WebsiteController@addToNewsletter');
 
 Route::get('/unsubscribe/{id}', 'WebsiteController@Unsubscribe');
 
+Route::get('/galerie', 'WebsiteController@showGalery')->name('galerie');
+
 /*
  * Route BACK
  */

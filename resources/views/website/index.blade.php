@@ -63,8 +63,7 @@
     <div class="container">
         <div class="col-sm-6">
             <div class="about_content align-center">
-                <h3 class="mb-15">Introducing</h3>
-                <h2 class="mb-15">The Barber Shop Science 1991</h2>
+                <h2 class="mb-15">Salon de coiffure homme et femme</h2>
                 <img class="mb-20" src="img/about-logo.png" alt="logo">
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
                 <a href="#" class="default_btn">More About Us</a>

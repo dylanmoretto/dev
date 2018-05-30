@@ -6,10 +6,10 @@
      msg envoyé
      dd{{$alert}}
 @else
-
+</br></br></br>
 <section class="book_section padding">
     <div class="container">
-        <div class="col-sm-6">
+        <div class="col-sm-6 col-lg-offset-3">
             <div class="book_form">
                 <div class="section_heading mb-40">
                     <h2>Nous contacter</h2>
