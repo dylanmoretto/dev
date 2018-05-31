@@ -81,7 +81,7 @@
 <section class="service_section bg-grey bd-bottom padding">
     <div class="container">
         <div class="section_heading align-center mb-40">
-            <h2>Nos prestations</h2>
+            <h2>Nos Prestations</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>It has survived not only five centuries.</p>
         </div>
         <div class="col-sm-3 col-xs-6 xs-padding">
@@ -108,7 +108,7 @@
         <div class="col-sm-3 col-xs-6 xs-padding">
             <div class="service_content align-center">
                 <img src="img/service-4.jpg" alt="Services">
-                <h3>Défrisage</h3>
+                <h3>Chignon de Mariage</h3>
                 <P>Lorem Ipsum is simply dummy<br> and typesetting industry.</P>
             </div>
         </div>
@@ -119,7 +119,10 @@
     <div class="container">
         <div class="section_heading align-center mb-40">
             <h2>Notre Coiffeuse</h2>
-            <p>Cassandra, Pasionné depuis son plus jeune age,</br> Notre coiffeuse diplomée  </p>
+            <p> Cassandra, Pasionnée depuis son plus jeune age,</br> 
+                Elle c'est tout naturellement dirigée vers des études de coiffures après le collège,</br>
+                Titulaire d'Un CAP, puis une mention complémentaire en couleur puis un Brevet Pro 
+            </p>
         </div><!-- /.section_heading -->
         <ul class="team_members">
             <li class="col-md-3 col-xs-6">
@@ -185,7 +188,7 @@
     <div class="container">
         <div class="section_heading align-center mb-40">
             <h2>Nos Tarifs</h2>
-            <p>Cliquez ici pour consulter notre fiche tarif complète</p>
+            <p><a href ="{{url('tarif')}}">Cliquez ici pour consulter notre fiche tarif complète</a></p>
         </div><!-- /.section_heading -->
         <div class="col-sm-4 xs-padding">
             <div class="price_wrap">
@@ -194,61 +197,70 @@
                     <li>
                         <h4>Avec Amoniaque</h4>
                         <p></p>
-                        <span class="price">X à Y€</span>
+                        <span class="price">
+                            <span class ="tiret">-------------------------</span>
+                            <span class="startPrice">A partir de </span>  42 €
+                        </span>
                     </li>
                     <li>
                         <h4>Sans Amoniaque</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <span class="price">X à Y€</span>
+                        <p></p>
+                        <span class="price">
+                            <span class ="tiret">-------------------------</span>
+                            <span class="startPrice">A partir de </span>  50 €
+                        </span>
                     </li>
                     <li>
                         <h4>Patine</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <span class="price">X A Y €</span>
+                        <p></p>
+                        <span class="price">
+                            <span class ="tiret">---------------------------------------------</span>
+                            <span class="startPrice">A partir de </span>   15 €
+                        </span>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="col-sm-4 xs-padding">
             <div class="price_wrap">
-                <h3>Shaving</h3>
+                <h3>Coupe femme</h3>
                 <ul class="price_list">
                     <li>
-                        <h4>Clean Shaving</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <span class="price">$8</span>
+                        <h4>Coupe courte + brushing</h4>
+                        <p></p>
+                        <span class="price"><span class ="tiret">----------------------------------- </span>32 €</span>
                     </li>
                     <li>
-                        <h4>Beard Triming</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <span class="price">$9</span>
+                        <h4>Coupe mi-long + brushing</h4>
+                        <p></p>
+                        <span class="price"><span class ="tiret">----------------------------------- </span>38 €</span>
                     </li>
                     <li>
-                        <h4>Smooth Shave</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <span class="price">$10</span>
+                        <h4>Coupe longue + brushing</h4>
+                        <p></p>
+                        <span class="price"><span class ="tiret">----------------------------------- </span>43 €</span>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="col-sm-4 xs-padding">
             <div class="price_wrap">
-                <h3>Face Masking</h3>
+                <h3>Coupe homme & enfant</h3>
                 <ul class="price_list">
                     <li>
-                        <h4>White Facial</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <span class="price">$8</span>
+                        <h4>Coupe homme</h4>
+                        <p></p>
+                        <span class="price"><span class ="tiret">--------------------------------------------------- </span>20 €</span>
                     </li>
                     <li>
-                        <h4>Face Cleaning</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <span class="price">$9</span>
+                        <h4>Coupe garçon</h4>
+                        <p>Jusqu'à 10 ans.</p>
+                        <span class="price"><span class ="tiret">--------------------------------------------------- </span>17 €</span>
                     </li>
                     <li>
-                        <h4>Bright Tuning</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <span class="price">$10</span>
+                        <h4>Coupe jeune fille</h4>
+                        <p>Jusqu'à 10 ans.</p>
+                        <span class="price"><span class ="tiret">------------------------------------------------ </span>20 €</span>
                     </li>
                 </ul>
             </div>

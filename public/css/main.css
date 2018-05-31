@@ -989,9 +989,6 @@ ul.list li:before{
 }
 .pricing_section .price_wrap .price_list li h4:after{
     color: #bbb;
-    content: "--------------------" 
-    "--------------------" "--------------------" 
-    "--------------------";
     font-weight: normal;
     margin-left: 10px;
     position: absolute;
@@ -1733,4 +1730,15 @@ ul.list li:before{
 .navbar-header a{
     text-decoration: none;
     color: #9e8a78;
+}
+
+.startPrice{
+    font-size: 14px;
+    font-style: italic;
+}
+
+
+.tiret{
+    font-size: 12px;
+    font-weight: 400;
 }
