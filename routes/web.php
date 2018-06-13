@@ -17,34 +17,33 @@
 */
 
 Route::get('/', 'WebsiteController@index')->name('index');
-
 Route::get('/tarif', 'WebsiteController@showTarif')->name('tarif');
-
 Route::get('/contact', 'WebsiteController@contact')->name('contact');
 Route::post('/contact', 'WebsiteController@contactForm')->name('contactPost');
-
 Route::get('/who', 'WebsiteController@whoAre')->name('who');
-
 Route::post('/addmail', 'WebsiteController@addToNewsletter');
-
 Route::get('/unsubscribe/{id}', 'WebsiteController@Unsubscribe');
-
 Route::get('/galerie', 'WebsiteController@showGalery')->name('galerie');
+Route::get('/register', 'WebsiteController@index');   
+Route::get('logout', 'Auth\LoginController@logout')->name('logout');
+
 
 /*
  * Route BACK
- */
+ *
+*/  
 
-Route::get('/back', 'BackController@index')->name('indexBack');
-Route::get('/back/newsletter', 'BackController@newsletter')->name('newsletter');
-
-Route::get('/back/stat', 'BackController@stat')->name('stat');
+Route::group( ['middleware' => 'auth' ], function(){
+	Route::get('/back', 'BackController@index')->name('indexBack');
+	Route::get('/back/newsletter', 'BackController@newsletter')->name('newsletter');
+	Route::get('/back/stat', 'BackController@stat')->name('stat');
+});
 
 
 
 /*
-	* ROUTE ECOMMERCE
-	*
+ * ROUTE ECOMMERCE
+ *
 */
 
 
@@ -55,8 +54,13 @@ Route::get('/back/stat', 'BackController@stat')->name('stat');
 	* ROUTE ENCAISSEMENT
 	*
 */
+/*
 Route::get('/boutique', 'BoutiqueController@index');
 Route::get('/front', 'FrontController@index');
 Route::post('/show/{id}', 'FrontController@showCategory');
 Route::post('/add', 'CartController@add');
 Route::post('/panier', 'FrontController@showPanier');
+*/
+
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');

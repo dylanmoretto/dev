@@ -43,7 +43,7 @@ class BackController extends Controller
 
     public function stat ()
     {
-        $lava = new Lavacharts; // See note below for Laravel
+      /*  $lava = new Lavacharts; // See note below for Laravel
         $finances = $lava->DataTable();
         $finances->addDateColumn('Year')
                  ->addNumberColumn('Sales')
@@ -68,7 +68,7 @@ class BackController extends Controller
                                     'fontSize' => 14
                                 ))
                             ));
-
+        */
         $nbViewWeek  = View::getCountViewWeek();
         $nbViewToday = View::getCountViewToday();
         $nbViewMonth = View::getCountViewMonth();
@@ -77,7 +77,7 @@ class BackController extends Controller
             'nbViewToday' => $nbViewToday,
             'nbViewWeek' => $nbViewWeek,
             'nbViewMonth' => $nbViewMonth,
-            'lava'=>$lava,
+            //'lava'=>$lava,
         ));
     }
 }
